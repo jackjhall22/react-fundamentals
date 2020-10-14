@@ -2,6 +2,19 @@
 <!-- http://localhost:3000/isolated/exercise/01.html -->
 
 <!-- 🐨 Create (in HTML) a <body> with a <div> with the id of "root" -->
+<html>
+  <body></body>
+  <script type="module">
+    const rootNode = document.getRootNode()
+    const rootDiv = document.createElement('div')
+    rootDiv.id = 'root'
+    document.body.appendChild(rootDiv)
+    const hello = document.createElement('div')
+    hello.textContent = 'Hello World'
+    hello.className = 'container'
+    document.getElementById('root').append(hello)
+  </script>
+</html>
 <!-- 🐨 Then create a <script type="module"> for your JavaScript -->
 
 <!-- These next instructions are to be written in JavaScript in the <script> tag -->
