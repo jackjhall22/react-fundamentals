@@ -19,8 +19,7 @@
     const type = 'div'
     const span = React.createElement('span', {children: 'Hello '})
     const span2 = React.createElement('span', {children: 'World'})
-    const elementProps = {className: 'container', children: [span, span2]}
-    const reactElement = React.createElement(type, elementProps)
+    const reactElement = React.createElement(type, { className: 'container'}, span, span2)
 
     // This is similar to ReactDOM.render
     ReactDOM.render(reactElement, rootElement)
