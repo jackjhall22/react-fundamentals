@@ -18,16 +18,16 @@ const orange = { backgroundColor: 'orange'};
 // const smallBox = <div className="box box--small" style={lightBlue}>small lightblue box</div>
 // const mediumBox = <div className="box box--medium" style={pink}>medium pink box</div>
 // const largeBox = <div className="box box--large"style={orange}>large orange box</div>
-const Box = ({ style, className, children }) => {
-  return (<div className={`box ${className}`} style={{ ...style, fontStyle: 'italic'}}>{children}</div>)
+const Box = ({ style, size, children }) => {
+  return (<div className={`box box--${size}`} style={{ ...style, fontStyle: 'italic'}}>{children}</div>)
 }
 
 function App() {
   return (
     <div>
-      <Box className="box--small" style={lightBlue}>small lightblue box</Box>
-      <Box className="box--medium" style={pink}>medium pink box</Box>
-      <Box className="box--large" style={orange}>large orange box</Box>
+      <Box size="small" style={lightBlue}>small lightblue box</Box>
+      <Box size="medium" style={pink}>medium pink box</Box>
+      <Box size="large" style={orange}>large orange box</Box>
     </div>
   )
 }
