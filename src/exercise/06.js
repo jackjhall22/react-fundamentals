@@ -6,7 +6,7 @@ import React, { useState, useRef } from 'react'
 function UsernameForm({onSubmitUsername}) {
   const inputEl = useRef(null)
   // const [username, setUsername] = useState('');
-  const [isValid, setError] = useState('');
+  const [isValid, setError] = useState(null);
   // 🐨 add a submit event handler here (`handleSubmit`).
   function handleSubmit(event) {
     onSubmitUsername(inputEl.current.value)
